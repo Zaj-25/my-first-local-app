@@ -1,36 +1,12 @@
-players_list = [
-    {"name": "Shohei Ohtani",
-     "team": "Dodgers",
-     "league": "NL",
-     "position": "DH",
-     "bats": "L",
-     "throws": "R"},
+import csv
 
-     {"name": "Aaron Judge",
-     "team": "Yankees",
-     "league": "AL",
-     "position": "OF",
-     "bats": "R",
-     "throws": "R"},
+def load_players():
+    players_list = []
 
-    {"name": "Bryce Harper",
-     "team": "Phillies",
-     "league": "NL",
-     "position": "1B",
-     "bats": "L",
-     "throws": "R"},
+    with open("players.csv", "r") as file:
+        reader = csv.DictReader(file)
 
-     {"name": "Mike Trout",
-     "team": "DAngels",
-     "league": "AL",
-     "position": "OF",
-     "bats": "R",
-     "throws": "R"},
+        for row in reader:
+            players_list.append(row)
 
-     {"name": "Mookie Betts",
-     "team": "Dodgers",
-     "league": "NL",
-     "position": "SS",
-     "bats": "R",
-     "throws": "R"}
-]
+    return players_list
