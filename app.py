@@ -1,12 +1,10 @@
 import random
+from players import players_list
 
-players = ["Mike Trout", "Aaron Judge", "Pete Alonso"]
+def display_intro():
+    print("Welcome to MLB Guessing Game!")
+    print("Try to guess the mystery MLB player.")
+    print("You will get hints after each incorrect guess.")
+    print()
 
-answer = random.choice(players)
-
-guess = input("Guess the MLB player: ")
-
-if guess == answer:
-    print("Correct!")
-else:
-    print(f"Wrong! The players was {answer}")
+display_intro()
