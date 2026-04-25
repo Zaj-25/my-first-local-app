@@ -20,7 +20,7 @@ def hints(guess_player, mystery_player):
 
     for category in categories:
         if guess_player[category] == mystery_player[category]:
-            print(f"{category.title()}: Correct")
+            print(f"{category.title()}: {guess_player[category]} is Correct")
         else:
             print(f"{category.title()}: {guess_player[category]} is incorrect")
 
@@ -42,10 +42,11 @@ def play_game():
             continue
         guesses += 1
 
-        if guess_player["name"] == mystery_player["name"]:
+        if guess_player["name"].lower() == mystery_player["name"].lower():
             print(f"\nCorrect! The mystery player was {mystery_player['name']}.")
             print(f"You guessed it in {guesses} guesses.")
-
+            return
+        
         hints(guess_player, mystery_player)
         print(f"Guesses remaining: {max_guesses - guesses}")
 
