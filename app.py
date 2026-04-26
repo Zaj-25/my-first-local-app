@@ -63,4 +63,14 @@ def play_game():
     print("\nGame over!")
     print(f"The mystery player was {mystery_player['name']}.")
 
-play_game()
+def main():
+    while True:
+        play_game()
+
+        play_again = input("\nDo you want to play again? (y/n): ")
+
+        if play_again.lower() != "y":
+            print("Thanks for playing!")
+            break
+
+main()
