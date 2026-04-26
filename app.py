@@ -108,14 +108,31 @@ def get_results_symbols(guess_player, mystery_player):
 
 def show_guess_history(guess_history, mystery_player):
     print("\nGuess History:")
-    print("Name | Team | League | Division | Position | Bats | Throws | Age | Height")
-    print("-" * 85)
+    print("-" * 110)
+
+    headers = ["#", "Player", "Team", "League", "Division", "Position", "Bats", "Throws", "Age", "Height"]
+
+    print(f"{headers[0]:<3}{headers[1]:<22}{headers[2]:10}{headers[3]:<10}{headers[4]:<12}{headers[5]:<12}{headers[6]:<8}{headers[7]:<8}{headers[8]:<8}{headers[9]:<8}")
+    print("-" * 110)
 
     for number, player in enumerate(guess_history, start=1):
         symbols = get_results_symbols(player, mystery_player)
-        symbols_text = " | ".join(symbols)
+        formatted = [s + " " for s in symbols]
 
-        print(f"{number}. {player['name']} | {symbols_text}")
+        print(
+            f"{number:<3}"
+            f"{player['name']:<22}"
+            f"{formatted[0]:<10}"
+            f"{formatted[1]:<10}"
+            f"{formatted[2]:<12}"
+            f"{formatted[3]:<12}"
+            f"{formatted[4]:<8}"
+            f"{formatted[5]:<8}"
+            f"{formatted[6]:<8}"
+            f"{formatted[7]:<8}"
+        )
+
+    print("-" * 110)
 
 def play_game():
     players_list = load_players()
