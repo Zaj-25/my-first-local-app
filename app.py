@@ -7,8 +7,7 @@ def display_intro():
     print("You will get hints after each incorrect guess.")
     print()
 
-def find_player(guess):
-    players_list = load_players()
+def find_player(guess, players_list):
     for player in players_list:
         if player["name"].lower() == guess.lower():
             return player
@@ -17,7 +16,7 @@ def find_player(guess):
 def hints(guess_player, mystery_player):
     print("\nFeedback:")
 
-    categories = ["team", "league", "position", "bats", "throws"]
+    categories = ["team", "league", "division", "position", "bats", "throws"]
 
     for category in categories:
         if guess_player[category] == mystery_player[category]:
@@ -37,7 +36,7 @@ def play_game():
 
     while guesses < max_guesses:
         guess = input("Enter your guess: ")
-        guess_player = find_player(guess)
+        guess_player = find_player(guess, players_list)
 
         if guess_player is None:
             print("That player is not in the database. Try again.")
