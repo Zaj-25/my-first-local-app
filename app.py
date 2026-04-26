@@ -26,11 +26,18 @@ def hints(guess_player, mystery_player):
 
     print()
 
+def show_guess_history(guess_history):
+    print("\nGuess History:")
+
+    for number, player in enumerate(guess_history, start=1):
+        print(f"{number}. {player['name']} - {player['team']}, {player['league']} {player['division']}, {player['position']}")
+
 def play_game():
     players_list = load_players()
     mystery_player = random.choice(players_list)
     guesses = 0
     max_guesses = 6
+    guess_history = []
 
     display_intro()
 
@@ -42,6 +49,7 @@ def play_game():
             print("That player is not in the database. Try again.")
             continue
         guesses += 1
+        guess_history.append(guess_player)
 
         if guess_player["name"].lower() == mystery_player["name"].lower():
             print(f"\nCorrect! The mystery player was {mystery_player['name']}.")
@@ -49,6 +57,7 @@ def play_game():
             return
         
         hints(guess_player, mystery_player)
+        show_guess_history(guess_history)
         print(f"Guesses remaining: {max_guesses - guesses}")
 
     print("\nGame over!")
