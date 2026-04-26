@@ -3,6 +3,11 @@ init()
 import random
 from players import load_players
 
+#Symbols
+CHECK = "✅"
+CROSS = "❌"
+UP = "⬆️"
+DOWN = "⬇️"
 def display_intro():
     print("Welcome to MLB Guessing Game!")
     print("Try to guess the mystery MLB player.")
@@ -69,11 +74,48 @@ def hints(guess_player, mystery_player):
 
     print()
 
-def show_guess_history(guess_history):
+def get_results_symbols(guess_player, mystery_player):
+    categories = ["team", "league", "division", "position", "bats", "throws",]
+    symbols = []
+
+    for cateogry in categories:
+        if guess_player[cateogry] == mystery_player[cateogry]:
+            symbols.append(Fore.GREEN + CHECK + Style.RESET_ALL)
+        else:
+            symbols.append(Fore.RED + CROSS + Style.RESET_ALL)
+    
+    guess_age = int(guess_player["age"])
+    mystery_age = int(mystery_player["age"])
+
+    if guess_age == mystery_age:
+        symbols.append(Fore.GREEN + CHECK + Style.RESET_ALL)
+    elif guess_age < mystery_age:
+        symbols.append(Fore.YELLOW + UP + Style.RESET_ALL)
+    else:
+        symbols.append(Fore.YELLOW + DOWN + Style.RESET_ALL)
+    
+    guess_height = int(guess_player["height"])
+    mystery_height = int(mystery_player["height"])
+
+    if guess_height == mystery_height:
+        symbols.append(Fore.GREEN + CHECK + Style.RESET_ALL)
+    elif guess_height < mystery_height:
+        symbols.append(Fore.YELLOW + UP + Style.RESET_ALL)
+    else:
+        symbols.append(Fore.YELLOW + DOWN + Style.RESET_ALL)
+    
+    return symbols
+
+def show_guess_history(guess_history, mystery_player):
     print("\nGuess History:")
+    print("Name | Team | League | Division | Position | Bats | Throws | Age | Height")
+    print("-" * 85)
 
     for number, player in enumerate(guess_history, start=1):
-        print(f"{number}. {player['name']} - {player['team']}, {player['league']} {player['division']}, {player['position']}")
+        symbols = get_results_symbols(player, mystery_player)
+        symbols_text = " | ".join(symbols)
+
+        print(f"{number}. {player['name']} | {symbols_text}")
 
 def play_game():
     players_list = load_players()
@@ -100,7 +142,7 @@ def play_game():
             return
         
         hints(guess_player, mystery_player)
-        show_guess_history(guess_history)
+        show_guess_history(guess_history, mystery_player)
         print(f"Guesses remaining: {max_guesses - guesses}")
 
     print("\nGame over!")
