@@ -1,3 +1,5 @@
+from colorama import Fore, Style, init
+init()
 import random
 from players import load_players
 
@@ -20,30 +22,30 @@ def hints(guess_player, mystery_player):
 
     for category in categories:
         if guess_player[category] == mystery_player[category]:
-            print(f"{category.title()}: {guess_player[category]} is Correct")
+            print(Fore.GREEN + f"{category.title()}: {guess_player[category]} is Correct" + Style.RESET_ALL)
         else:
-            print(f"{category.title()}: {guess_player[category]} is incorrect")
+            print(Fore.RED + f"{category.title()}: {guess_player[category]} is incorrect" + Style.RESET_ALL)
     #Age Hint
     guess_age = int(guess_player["age"])
     mystery_age = int(mystery_player["age"])
 
     if guess_age == mystery_age:
-        print(f"Age: {guess_age} Correct")
+        print(Fore.GREEN + f"Age: {guess_age} Correct" + Style.RESET_ALL)
     elif guess_age < mystery_age:
-        print(f"Age: {guess_age} (too low)")
+        print(Fore.YELLOW + f"Age: {guess_age} (too low)" + Style.RESET_ALL)
     else:
-        print(f"Age: {guess_age} (too high)")
+        print(Fore.YELLOW + f"Age: {guess_age} (too high)" + Style.RESET_ALL)
     
     #Height Hint
     guess_height = int(guess_player["height"])
     mystery_height = int(mystery_player["height"])
 
     if guess_height == mystery_height:
-        print(f"Height: {guess_height} Correct")
+        print(Fore.GREEN + f"Height: {guess_height} Correct" + Style.RESET_ALL)
     elif guess_height < mystery_height:
-        print(f"Height: {guess_height} (too short)")
+        print(Fore.YELLOW + f"Height: {guess_height} (too short)" + Style.RESET_ALL)
     else:
-        print(f"Height: {guess_height} (too tall)")
+        print(Fore.YELLOW + f"Height: {guess_height} (too tall)" + Style.RESET_ALL)
 
     print()
 
