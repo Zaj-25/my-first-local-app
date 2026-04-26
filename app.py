@@ -1,5 +1,5 @@
 import random
-from players import players_list
+from players import load_players
 
 def display_intro():
     print("Welcome to MLB Guessing Game!")
@@ -8,6 +8,7 @@ def display_intro():
     print()
 
 def find_player(guess):
+    players_list = load_players()
     for player in players_list:
         if player["name"].lower() == guess.lower():
             return player
@@ -27,6 +28,7 @@ def hints(guess_player, mystery_player):
     print()
 
 def play_game():
+    players_list = load_players()
     mystery_player = random.choice(players_list)
     guesses = 0
     max_guesses = 6
