@@ -1,11 +1,11 @@
-name,team,league,division,position,bats,throws
-Shoehei Ohtani,Dodgers,NL,West,DH,L,R
-Mookie Betts,Dodgers,NL,West,SS,R,R
-Freddie Freeman,Dodgers,NL,West,1B,L,R
-Aaron Judge,Yankees,AL,East,OF,R,R
-Juan Soto,Mets,NL,East,OF,L,L
-Bryce Harper,Phillies,NL,East,1B,L,R
-Mike Trout,Angels,AL,West,OF,R,R
-Jose Ramirez,Guardians,AL,Central,3B,S,R
-Bobby Witt Jr.,Royals,AL,Central,SS,R,R
-Gunnar Henderson,Orioles,AL,East,SS,L,R
+name,team,league,division,position,bats,throws,age,height
+Shohei Ohtani,Dodgers,NL,West,DH,L,R,31,76
+Mookie Betts,Dodgers,NL,West,SS,R,R,33,69
+Freddie Freeman,Dodgers,NL,West,1B,L,R,36,76
+Aaron Judge,Yankees,AL,East,OF,R,R,33,79
+Juan Soto,Mets,NL,East,OF,L,L,27,73
+Bryce Harper,Phillies,NL,East,1B,L,R,33,73
+Mike Trout,Angels,AL,West,OF,R,R,34,73
+Jose Ramirez,Guardians,AL,Central,3B,S,R,33,68
+Bobby Witt Jr.,Royals,AL,Central,SS,R,R,25,73
+Gunnar Henderson,Orioles,AL,East,SS,L,R,24,75

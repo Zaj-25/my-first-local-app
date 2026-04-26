@@ -23,6 +23,27 @@ def hints(guess_player, mystery_player):
             print(f"{category.title()}: {guess_player[category]} is Correct")
         else:
             print(f"{category.title()}: {guess_player[category]} is incorrect")
+    #Age Hint
+    guess_age = int(guess_player["age"])
+    mystery_age = int(mystery_player["age"])
+
+    if guess_age == mystery_age:
+        print(f"Age: {guess_age} Correct")
+    elif guess_age < mystery_age:
+        print(f"Age: {guess_age} (too low)")
+    else:
+        print(f"Age: {guess_age} (too high)")
+    
+    #Height Hint
+    guess_height = int(guess_player["height"])
+    mystery_height = int(mystery_player["height"])
+
+    if guess_height == mystery_height:
+        print(f"Height: {guess_height} Correct")
+    elif guess_height < mystery_height:
+        print(f"Height: {guess_height} (too short)")
+    else:
+        print(f"Height: {guess_height} (too tall)")
 
     print()
 
