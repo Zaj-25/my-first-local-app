@@ -10,9 +10,29 @@ def display_intro():
     print()
 
 def find_player(guess, players_list):
+    guess = guess.lower().strip()
+
+    matches = []
+
     for player in players_list:
-        if player["name"].lower() == guess.lower():
+        player_name = player["name"].lower()
+
+        if guess == player_name:
             return player
+        
+        if guess in player_name:
+            matches.append(player)
+    
+    if len(matches) == 1:
+        return matches[0]
+    
+    if len(matches) > 1:
+        print("\nMultiple players matched your guess:")
+        for player in matches:
+            print(f"- {player['name']}")
+        print("Please type a more specific name.")
+        return None
+    
     return None
 
 def hints(guess_player, mystery_player):
