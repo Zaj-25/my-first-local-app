@@ -14,6 +14,8 @@ def display_intro():
     print("You will get hints after each incorrect guess.")
     print()
 
+#Asked AI how to allow partial name amtching and handle multiple matches.
+#Then implemented the logic myself using substring checks and a match list.
 def find_player(guess, players_list):
     guess = guess.lower().strip()
 
@@ -40,6 +42,8 @@ def find_player(guess, players_list):
     
     return None
 
+#Asked AI how to implement "close" logic for numerical categories within range of 2
+#Then wrote the conditional checks using abs() to compare values
 def hints(guess_player, mystery_player):
     print("\nFeedback:")
 
@@ -73,7 +77,8 @@ def hints(guess_player, mystery_player):
         print(Fore.RED + f"Height: {guess_height} is incorrect" + Style.RESET_ALL)
 
     print()
-
+#Asked AI how to format guess history visually using symbols
+#I then adapted the structure to fit my game and how I wanted it to look
 def get_results_symbols(guess_player, mystery_player):
     categories = ["team", "league", "division", "position", "bats", "throws"]
     results = []
@@ -105,7 +110,7 @@ def get_results_symbols(guess_player, mystery_player):
         results.append(RED)
     
     return results
-
+#Same as comment above for the previous function
 def show_guess_history(guess_history, mystery_player):
     print("\nGuess History:\n")
 
@@ -169,7 +174,8 @@ def play_game():
     print("\nGame over!")
     print(f"The mystery player was {mystery_player['name']}.")
     return False
-
+#Asked AI how to track a win streak across multiple game runs
+#Then implemented a counter that updates based on game results
 def main():
     win_streak = 0
     
