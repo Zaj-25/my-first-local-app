@@ -12,6 +12,6 @@ A Python-based terminal game inspired by MLB Pickle, where players try to guess 
 - Difficulty selection (Easy / Medium / Hard)
 - Smart input (partial name matching)
 - Guess history with visual feedback grid
-- Age & Hint "close" hint system
+- Age & Height "close" hint system
 - Win streak tracker
 - Over 100+ MLB players across all teams
