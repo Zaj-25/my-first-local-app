@@ -160,7 +160,7 @@ def play_game():
             print(f"\nCorrect! The mystery player was {mystery_player['name']}.")
             print(f"You guessed it in {guesses} guesses.")
             show_guess_history(guess_history, mystery_player)
-            return
+            return True
         
         hints(guess_player, mystery_player)
         show_guess_history(guess_history, mystery_player)
@@ -168,11 +168,21 @@ def play_game():
 
     print("\nGame over!")
     print(f"The mystery player was {mystery_player['name']}.")
+    return False
 
 def main():
+    win_streak = 0
+    
     while True:
-        play_game()
+        won_game = play_game()
 
+        if won_game:
+            win_streak += 1
+            print(f"Current win streak: {win_streak}")
+        else:
+            win_streak = 0
+            print("Win streak reset to 0.")
+        
         play_again = input("\nDo you want to play again? (y/n): ")
 
         if play_again.lower() != "y":
