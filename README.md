@@ -1,16 +1,17 @@
-# Baseball Guessing Game
+# MLB Mystery Game
 
-This project is a baseball-themed guessing game inspired by games like MLB Pickle. The program randomly selects a Major League Baseball (MLB) player, and the user must guess who the player is based on clues.
-
-## Features
-- Random MLB player selection
-- User input for guesses
-- Feedback after each guess
-- Clues such as team, position, or stats
-- Simple and interactive command-line gameplay
+A Python-based terminal game inspired by MLB Pickle, where players try to guess a randomly selected MLB player using hints and feedback.
 
 ## How to Play
-1. Run the program:
-   python app.py
-2. Enter your guess when prompted
-3. Keep guessing until you find the correct player or run out of guesses
+1. A Mystery MLB player is selected at the start of the game
+2. Choose you difficulty (Easy, Medium, Hard)
+3. After each guess you'll receive feedback on attributes about the player
+4. Use the hints to narrow down the mystery player
+
+## Features
+- Difficulty selection (Easy / Medium / Hard)
+- Smart input (partial name matching)
+- Guess history with visual feedback grid
+- Age & Hint "close" hint system
+- Win streak tracker
+- Over 100+ MLB players across all teams
