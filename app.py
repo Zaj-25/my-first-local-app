@@ -159,6 +159,7 @@ def play_game():
         if guess_player["name"].lower() == mystery_player["name"].lower():
             print(f"\nCorrect! The mystery player was {mystery_player['name']}.")
             print(f"You guessed it in {guesses} guesses.")
+            show_guess_history(guess_history, mystery_player)
             return
         
         hints(guess_player, mystery_player)
