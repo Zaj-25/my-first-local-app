@@ -44,6 +44,7 @@ def find_player(guess, players_list):
 
 #Asked AI how to implement "close" logic for numerical categories within range of 2
 #Then wrote the conditional checks using abs() to compare values
+#Also used AI to figure out how to make the font a certain color, then implemented for my code
 def hints(guess_player, mystery_player):
     print("\nFeedback:")
 
