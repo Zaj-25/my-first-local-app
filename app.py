@@ -120,6 +120,7 @@ def play_game():
     guess_history = []
 
     display_intro()
+    print(f"Legend: {GREEN} Corect | {RED} Incorrect | {YELLOW} Close\n")
 
     while guesses < max_guesses:
         guess = input("Enter your guess: ")
