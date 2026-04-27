@@ -1,11 +1,121 @@
 name,team,league,division,position,bats,throws,age,height
+George Springer,Blue Jays,AL,East,DH,R,R,36,75
+Vladimir Guerrero Jr.,Blue Jays,AL,East,1B,R,R,27,74
+Alejandro Kirk,Blue Jays,AL,East,C,R,R,27,68
+Kevin Gausman,Blue Jays,AL,East,P,R,R,35,75
+Gunnar Henderson,Orioles,AL,East,SS,L,R,24,74
+Pete Alonso,Orioles,AL,East,1B,R,R,31,75
+Adley Rutschman,Orioles,AL,East,C,S,R,28,74
+Kyle Bradish,Orioles,AL,East,P,R,R,29,76
+Yandy Diaz,Rays,AL,East,DH,R,R,34,74
+Junior Caminero,Rays,AL,East,3B,R,R,22,73
+Carson Williams,Rays,AL,East,SS,R,R,22,74
+Shane McClanahan,Rays,AL,East,P,L,L,28,73
+Roman Anthony,Red Sox,AL,East,OF,L,R,21,75
+Trevor Story,Red Sox,AL,East,SS,R,R,33,74
+Jarren Duran,Red Sox,AL,East,DH,L,R,29,74
+Garrett Crochet,Red Sox,AL,East,P,L,L,26,78
+Aaron Judge,Yankees,AL,East,OF,R,R,33,79
+Cody Bellinger,Yankees,AL,East,OF,L,L,30,76
+Jazz Chisholm Jr.,Yankees,AL,East,2B,L,R,28,71
+Max Fried,Yankees,AL,East,P,L,L,32,76
+Steven Kwan,Guardians,AL,Central,OF,L,L,28,69
+Jose Ramirez,Guardians,AL,Central,3B,S,R,33,69
+Bo Naylor,Guardians,AL,Central,C,L,R,26,72
+Tanner Bibee,Guardians,AL,Central,P,R,R,27,74
+Bobby Witt Jr.,Royals,AL,Central,SS,R,R,25,73
+Salvador Perez,Royals,AL,Central,C,R,R,35,75
+Vinnie Pasquantino,Royals,AL,Central,1B,L,R,28,76
+Cole Ragans,Royals,AL,Central,P,L,L,28,76
+Kerry Carpenter,Tigers,AL,Central,OF,L,R,28,74
+Riley Greene,Tigers,AL,Central,OF,L,L,25,75
+Spencer Torkelson,Tigers,AL,Central,1B,R,R,26,73
+Tarik Skubal,Tigers,AL,Central,P,L,L,29,75
+Byron Buxton,Twins,AL,Central,OF,R,R,32,74
+Ryan Jeffers,Twins,AL,Central,C,R,R,28,76
+Royce Lewis,Twins,AL,Central,3B,R,R,26,74
+Joe Ryan,Twins,AL,Central,P,R,R,29,74
+Colson Montgomery,White Sox,AL,Central,SS,L,R,24,75
+Miguel Vargas,White Sox,AL,Central,3B,R,R,26,75
+Andrew Benintendi,White Sox,AL,Central,DH,L,L,31,69
+Erick Fedde,White Sox,AL,Central,P,R,R,33,76
+Zach Neto,Angels,AL,West,SS,R,R,25,72
+Mike Trout,Angels,AL,West,OF,R,R,34,74
+Nolan Schanuel,Angels,AL,West,1B,L,L,24,76
+Jose Soriano,Angels,AL,West,P,R,R,27,75
+Jose Altuve,Astros,AL,West,2B,R,R,35,66
+Yordan Alvarez,Astros,AL,West,DH,L,R,28,77
+Carlos Correa,Astros,AL,West,SS,R,R,31,76
+Hunter Brown,Astros,AL,West,P,R,R,27,74
+Nick Kurtz,Athletics,AL,West,1B,L,L,23,77
+Shea Langeliers,Athletics,AL,West,C,R,R,28,72
+Brent Rooker,Athletics,AL,West,DH,R,R,31,75
+Luis Severino,Athletics,AL,West,P,R,R,32,74
+Cal Raleigh,Mariners,AL,West,C,S,R,29,75
+Julio Rodriguez,Mariners,AL,West,OF,R,R,25,75
+Josh Naylor,Mariners,AL,West,1B,L,L,28,71
+Logan Gilbert,Mariners,AL,West,P,R,R,28,78
+Corey Seager,Rangers,AL,West,SS,L,R,31,76
+Wyatt Langford,Rangers,AL,West,OF,R,R,24,73
+Josh Jung,Rangers,AL,West,3B,R,R,28,74
+Jacob deGrom,Rangers,AL,West,P,L,R,37,76
+Ronald Acuna Jr.,Braves,NL,East,OF,R,R,28,72
+Matt Olson,Braves,NL,East,1B,L,R,32,77
+Austin Riley,Braves,NL,East,3B,R,R,29,75
+Chris Sale,Braves,NL,East,P,L,L,37,78
+Agustin Ramirez,Marlins,NL,East,C,R,R,24,72
+Xavier Edwards,Marlins,NL,East,2B,S,R,26,70
+Sandy Alcantara,Marlins,NL,East,P,R,R,30,77
+Eury Perez,Marlins,NL,East,P,R,R,23,80
+Francisco Lindor,Mets,NL,East,SS,S,R,32,71
+Juan Soto,Mets,NL,East,OF,L,L,27,74
+Luis Robert Jr.,Mets,NL,East,OF,R,R,28,74
+Kodai Senga,Mets,NL,East,P,R,R,33,73
+Bryce Harper,Phillies,NL,East,1B,L,R,33,75
+Trea Turner,Phillies,NL,East,SS,R,R,32,74
+J.T. Realmuto,Phillies,NL,East,C,R,R,35,73
+Aaron Nola,Phillies,NL,East,P,R,R,32,74
+James Wood,Nationals,NL,East,OF,L,R,23,79
+CJ Abrams,Nationals,NL,East,SS,L,R,25,74
+Keibert Ruiz,Nationals,NL,East,C,S,R,27,72
+Jake Irvin,Nationals,NL,East,P,R,R,29,78
+William Contreras,Brewers,NL,Central,C,R,R,28,71
+Christian Yelich,Brewers,NL,Central,DH,L,R,34,75
+Brice Turang,Brewers,NL,Central,2B,L,R,26,72
+Jacob Misiorowski,Brewers,NL,Central,P,R,R,23,79
+Michael Busch,Cubs,NL,Central,1B,L,R,28,73
+Alex Bregman,Cubs,NL,Central,3B,R,R,32,72
+Pete Crow-Armstrong,Cubs,NL,Central,OF,L,L,24,72
+Shota Imanaga,Cubs,NL,Central,P,L,L,32,70
+Elly De La Cruz,Reds,NL,Central,SS,S,R,24,77
+Matt McLain,Reds,NL,Central,2B,R,R,26,71
+Tyler Stephenson,Reds,NL,Central,C,R,R,29,76
+Andrew Abbott,Reds,NL,Central,P,L,L,26,72
+Oneil Cruz,Pirates,NL,Central,OF,L,R,27,79
+Bryan Reynolds,Pirates,NL,Central,OF,S,R,31,75
+Henry Davis,Pirates,NL,Central,C,R,R,26,74
+Paul Skenes,Pirates,NL,Central,P,R,R,23,78
+Masyn Winn,Cardinals,NL,Central,SS,R,R,24,71
+Nolan Arenado,Cardinals,NL,Central,3B,R,R,35,74
+Willson Contreras,Cardinals,NL,Central,C,R,R,33,73
+Matthew Liberatore,Cardinals,NL,Central,P,L,L,26,76
+Corbin Carroll,Diamondbacks,NL,West,OF,L,L,25,70
+Ketel Marte,Diamondbacks,NL,West,2B,S,R,32,73
+Geraldo Perdomo,Diamondbacks,NL,West,SS,S,R,26,74
+Zac Gallen,Diamondbacks,NL,West,P,R,R,30,74
 Shohei Ohtani,Dodgers,NL,West,DH,L,R,31,76
 Mookie Betts,Dodgers,NL,West,SS,R,R,33,69
-Freddie Freeman,Dodgers,NL,West,1B,L,R,36,76
-Aaron Judge,Yankees,AL,East,OF,R,R,33,79
-Juan Soto,Mets,NL,East,OF,L,L,27,73
-Bryce Harper,Phillies,NL,East,1B,L,R,33,73
-Mike Trout,Angels,AL,West,OF,R,R,34,73
-Jose Ramirez,Guardians,AL,Central,3B,S,R,33,68
-Bobby Witt Jr.,Royals,AL,Central,SS,R,R,25,73
-Gunnar Henderson,Orioles,AL,East,SS,L,R,24,75
+Freddie Freeman,Dodgers,NL,West,1B,L,R,36,77
+Yoshinobu Yamamoto,Dodgers,NL,West,P,R,R,27,70
+Luis Arraez,Giants,NL,West,1B,L,R,28,70
+Willy Adames,Giants,NL,West,SS,R,R,30,72
+Matt Chapman,Giants,NL,West,3B,R,R,33,72
+Logan Webb,Giants,NL,West,P,R,R,29,73
+Ezequiel Tovar,Rockies,NL,West,SS,R,R,24,72
+Hunter Goodman,Rockies,NL,West,C,R,R,26,72
+Brenton Doyle,Rockies,NL,West,OF,R,R,27,75
+Kyle Freeland,Rockies,NL,West,P,L,L,32,76
+Fernando Tatis Jr.,Padres,NL,West,OF,R,R,27,75
+Manny Machado,Padres,NL,West,3B,R,R,33,75
+Jackson Merrill,Padres,NL,West,OF,L,R,22,75
+Mason Miller,Padres,NL,West,P,R,R,27,77
