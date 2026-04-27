@@ -4,10 +4,10 @@ import random
 from players import load_players
 
 #Symbols
-CHECK = "✅"
-CROSS = "❌"
-UP = "⬆️"
-DOWN = "⬇️"
+GREEN = "🟩"
+RED = "🟥"
+YELLOW = "🟨"
+
 def display_intro():
     print("Welcome to MLB Guessing Game!")
     print("Try to guess the mystery MLB player.")
@@ -75,64 +75,42 @@ def hints(guess_player, mystery_player):
     print()
 
 def get_results_symbols(guess_player, mystery_player):
-    categories = ["team", "league", "division", "position", "bats", "throws",]
-    symbols = []
+    categories = ["team", "league", "division", "position", "bats", "throws"]
+    results = []
 
     for cateogry in categories:
         if guess_player[cateogry] == mystery_player[cateogry]:
-            symbols.append(Fore.GREEN + CHECK + Style.RESET_ALL)
+            results.append(GREEN)
         else:
-            symbols.append(Fore.RED + CROSS + Style.RESET_ALL)
+            results.append(RED)
     
     guess_age = int(guess_player["age"])
     mystery_age = int(mystery_player["age"])
 
     if guess_age == mystery_age:
-        symbols.append(Fore.GREEN + CHECK + Style.RESET_ALL)
-    elif guess_age < mystery_age:
-        symbols.append(Fore.YELLOW + UP + Style.RESET_ALL)
+        results.append(GREEN)
     else:
-        symbols.append(Fore.YELLOW + DOWN + Style.RESET_ALL)
+        results.append(YELLOW)
     
     guess_height = int(guess_player["height"])
     mystery_height = int(mystery_player["height"])
 
     if guess_height == mystery_height:
-        symbols.append(Fore.GREEN + CHECK + Style.RESET_ALL)
-    elif guess_height < mystery_height:
-        symbols.append(Fore.YELLOW + UP + Style.RESET_ALL)
+        results.append(GREEN)
     else:
-        symbols.append(Fore.YELLOW + DOWN + Style.RESET_ALL)
+        results.append(YELLOW)
     
-    return symbols
+    return results
 
 def show_guess_history(guess_history, mystery_player):
-    print("\nGuess History:")
-    print("-" * 110)
-
-    headers = ["#", "Player", "Team", "League", "Division", "Position", "Bats", "Throws", "Age", "Height"]
-
-    print(f"{headers[0]:<3}{headers[1]:<22}{headers[2]:10}{headers[3]:<10}{headers[4]:<12}{headers[5]:<12}{headers[6]:<8}{headers[7]:<8}{headers[8]:<8}{headers[9]:<8}")
-    print("-" * 110)
+    print("\nGuess History:\n")
 
     for number, player in enumerate(guess_history, start=1):
-        symbols = get_results_symbols(player, mystery_player)
-        formatted = [s + " " for s in symbols]
-
-        print(
-            f"{number:<3}"
-            f"{player['name']:<22}"
-            f"{formatted[0]:<10}"
-            f"{formatted[1]:<10}"
-            f"{formatted[2]:<12}"
-            f"{formatted[3]:<12}"
-            f"{formatted[4]:<8}"
-            f"{formatted[5]:<8}"
-            f"{formatted[6]:<8}"
-            f"{formatted[7]:<8}"
-        )
-
-    print("-" * 110)
+        results = get_results_symbols(player, mystery_player)
+        squares = " ".join(results)
+        print(f"{number}. {player['name']:<20} {squares}")
+    
+    print()
 
 def play_game():
     players_list = load_players()
