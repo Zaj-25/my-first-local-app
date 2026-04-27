@@ -150,7 +150,7 @@ def play_game():
     max_guesses = choose_difficulty()
 
     print(f"\nYou have {max_guesses} guesses. Good luck!")
-    print(f"Legend: {GREEN} Corect | {RED} Incorrect | {YELLOW} Close\n")
+    print(f"Legend: {GREEN} Correct | {RED} Incorrect | {YELLOW} Close\n")
 
     while guesses < max_guesses:
         guess = input("Enter your guess: ")
