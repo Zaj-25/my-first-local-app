@@ -55,22 +55,22 @@ def hints(guess_player, mystery_player):
     mystery_age = int(mystery_player["age"])
 
     if guess_age == mystery_age:
-        print(Fore.GREEN + f"Age: {guess_age} Correct" + Style.RESET_ALL)
-    elif guess_age < mystery_age:
-        print(Fore.YELLOW + f"Age: {guess_age} (too low)" + Style.RESET_ALL)
+        print(Fore.GREEN + f"Age: {guess_age} is Correct" + Style.RESET_ALL)
+    elif abs(guess_age - mystery_age) <= 2:
+        print(Fore.YELLOW + f"Age: {guess_age} is Close" + Style.RESET_ALL)
     else:
-        print(Fore.YELLOW + f"Age: {guess_age} (too high)" + Style.RESET_ALL)
+        print(Fore.RED + f"Age: {guess_age} is Incorrect" + Style.RESET_ALL)
     
     #Height Hint
     guess_height = int(guess_player["height"])
     mystery_height = int(mystery_player["height"])
 
     if guess_height == mystery_height:
-        print(Fore.GREEN + f"Height: {guess_height} Correct" + Style.RESET_ALL)
-    elif guess_height < mystery_height:
-        print(Fore.YELLOW + f"Height: {guess_height} (too short)" + Style.RESET_ALL)
+        print(Fore.GREEN + f"Height: {guess_height} is Correct" + Style.RESET_ALL)
+    elif abs(guess_height - mystery_height) <= 2:
+        print(Fore.YELLOW + f"Height: {guess_height} is Close" + Style.RESET_ALL)
     else:
-        print(Fore.YELLOW + f"Height: {guess_height} (too tall)" + Style.RESET_ALL)
+        print(Fore.RED + f"Height: {guess_height} is incorrect" + Style.RESET_ALL)
 
     print()
 
@@ -89,16 +89,20 @@ def get_results_symbols(guess_player, mystery_player):
 
     if guess_age == mystery_age:
         results.append(GREEN)
-    else:
+    elif abs(guess_age - mystery_age) <= 2:
         results.append(YELLOW)
+    else:
+        results.append(RED)
     
     guess_height = int(guess_player["height"])
     mystery_height = int(mystery_player["height"])
 
     if guess_height == mystery_height:
         results.append(GREEN)
-    else:
+    elif abs(guess_height - mystery_height) <= 2:
         results.append(YELLOW)
+    else:
+        results.append(RED)
     
     return results
 
