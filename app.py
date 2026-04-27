@@ -116,14 +116,34 @@ def show_guess_history(guess_history, mystery_player):
     
     print()
 
+def choose_difficulty():
+    while True:
+        print("\nChoose a difficulty:")
+        print("1. Easy - 8 guesses")
+        print("2. Medium - 6 guesses")
+        print("3. Hard - 4 guesses")
+
+        choice = input("Enter 1, 2, or 3: ").strip()
+
+        if choice == "1":
+            return 8
+        elif choice == "2":
+            return 6
+        elif choice == "3":
+            return 4
+        else:
+            print("Invalid option. Please try again.\n")
+
 def play_game():
     players_list = load_players()
     mystery_player = random.choice(players_list)
     guesses = 0
-    max_guesses = 6
     guess_history = []
 
     display_intro()
+    max_guesses = choose_difficulty()
+
+    print(f"\nYou have {max_guesses} guesses. Good luck!")
     print(f"Legend: {GREEN} Corect | {RED} Incorrect | {YELLOW} Close\n")
 
     while guesses < max_guesses:
